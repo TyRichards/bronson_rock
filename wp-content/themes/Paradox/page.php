@@ -1,0 +1,1 @@
+<?php include('page-right-sidebar.php'); ?>

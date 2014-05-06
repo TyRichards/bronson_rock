@@ -1,0 +1,105 @@
+// Body /////////////////////////////////////////////////////////////////
+
+.main-container {
+  @include box-shadow($gray-light 0px 0px 70px);
+  border-right: 1px solid $gray-lighter;
+  border-left: 1px solid $gray-lighter;
+}
+
+.container {
+    z-index: 2;
+}
+// Header /////////////////////////////////////////////////////////////////
+
+body header { 
+    // @include dynamic-bg($header-bg-color); 
+    border-top: 10px solid $brand-primary;
+    border-bottom: 1px solid $gray-lighter;   
+    position: relative;
+}
+
+// Top Header Section /////////////////////////////////////////////////////////////////
+
+.top-header {
+    padding-top: $space-sm;
+    padding-bottom: $space-sm;
+}
+
+// Navbar Section /////////////////////////////////////////////////////////////////
+
+// Masthead Section /////////////////////////////////////////////////////////////////
+
+.masthead {
+    padding-top: $space-lg;
+    padding-bottom: $space-lg;    
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background: 50% 50% no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 20;
+    filter: alpha(opacity=2000);
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+
+// Body Content Section /////////////////////////////////////////////////////////////////
+
+.body-content {
+    // background: image-url('cream_dust.png') repeat;
+
+    .masthead, .primary-content, .block-section {
+        border-bottom: 1px solid darken($body-bg, 10%);             
+    }    
+}
+
+// Primary Content Section /////////////////////////////////////////////////////////////////
+
+.primary-content {
+    padding-top: $space-lg;
+    padding-bottom: $space-lg;
+}
+
+// Main Column Section /////////////////////////////////////////////////////////////////
+
+.main-col {
+    padding-bottom: $space-xs;
+}
+
+// Sidebar Section /////////////////////////////////////////////////////////////////
+
+// Footer /////////////////////////////////////////////////////////////////
+
+.footer {
+    // @include dynamic-bg($footer-bg-color);
+    background: $footer-bg-color;
+    border-top: 10px solid $brand-primary;
+}
+
+// More-Foot Section /////////////////////////////////////////////////////////////////
+
+.more-foot {
+    padding-top: $space-lg;
+    padding-bottom: $space-lg;
+}
+
+// Small Footer Section /////////////////////////////////////////////////////////////////
+
+.small-footer {
+    border-top: 1px solid darken($footer-bg-color, 10%);
+    padding: $space-sm-vert;
+
+    ul, ol, p {
+        margin-bottom: 0;
+    }
+}
