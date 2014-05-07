@@ -8,24 +8,30 @@ Template Name: Home
 
 <!-- Subheader Section -->
 <section class="masthead">
-    <div class="background">&nbsp;</div>
     <div class="container col-no-padding-xs">        
         <div class="col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-0"> 
+            <div class="flex-video widescreen">                
+                <iframe src="//www.youtube.com/embed/HR45Fcun7Gg?autohide=1&modestbranding=1&rel=0&showinfo=0" height="374" width="680" controls="2" allowfullscreen="" frameborder="0"></iframe>                                                      
+            </div>
         </div>        
         <div class="col-sm-10 col-sm-offset-1 col-md-5 col-md-offset-0">
-            <div class="col-sm-12 col-no-padding">
-                <h2>The Largest Selection in the Southwest</h2>
-                <p>
-                    <div class="col-xs-6 col-no-padding" style="padding-right:5px!important">
-                        <a class="btn btn-success btn-block text-center" href="/commercial">Curv</a>
-                    </div>                
-                    <div class="col-xs-6 col-no-padding" style="padding-left:5px!important">
-                        <a class="btn btn-success btn-block text-center" href="/residential">Beautyrest</a>
-                    </div>
-                </p>
+            <div class="col-sm-12 col-md-11 col-md-offset-1 col-no-padding">
+                <h2 class="clipboard-icon" >Inspect Your Investment</h2>
+                <div class="col-xs-6 col-no-padding" style="padding-right:5px">
+                    <a class="btn btn-danger btn-block text-center" href="/commercial">
+                        <i class="fa fa-building fa-1x"></i>
+                        Commercial
+                    </a>
+                </div>                
+                <div class="col-xs-6 col-no-padding" style="padding-left:5px">
+                    <a class="btn btn-primary btn-block text-center" href="/residential">
+                        <i class="fa fa-home fa-1x"></i>
+                        Residential
+                    </a>
+                </div>
                 <div class="clearfix"></div>                
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sem massa, varius sed enim non, ornare egestas velit. Curabitur at scelerisque ligula, ut ultricies diam. <a href="/about-us">Learn More</a>
+                    Our 200 point, 50-100 digitally documented inspection gives you the comfort of knowing that your real estate purchase, sale or lease is being tested, inspected and analyzed by the best in the business. <a href="/about-us">Learn More</a>
                 </p>
             </div>
         </div>        
@@ -52,19 +58,19 @@ Template Name: Home
 
                 } //endwhile;
                 ?>
-                <a class="btn btn-success" href="#">
+                <a class="btn btn-danger" href="#">
                     <i class="fa fa-phone fa-1x"></i>
-                    Call (555) 555-5555
+                    Call (972) 492-7920
                 </a>
-                    &nbsp;&nbsp;
-                <a class="btn btn-success" href="/locations">
-                    <i class="fa fa-map-marker fa-1x"></i>
-                    Locations
-                </a>             
+                    
+                <a class="btn btn-danger" href="/contact-us">
+                    <i class="fa fa-envelope fa-1x"></i>
+                    Email Us
+                </a>                  
            </div>
         </section>
         <section class="sidebar-col sidebar-right sidebar col-sm-5">
-            <div class="col-sm-12 col-md-10 col-md-offset-2 col-no-padding">
+            <div class="col-sm-12 col-md-10 col-md-offset-2 col-no-padding-xs">
 <!--                 <?php 
                     if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
                     the_post_thumbnail('sidebar-thumb', array('class' => 'feature-image attachment-sidebar-thumb img-rounded' ));

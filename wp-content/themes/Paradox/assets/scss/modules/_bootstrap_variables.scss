@@ -10,18 +10,18 @@ $gray-light:            lighten(#000, 60%);   // #999
 $gray-lighter:          lighten(#000, 93.5%); // #eee
 
 // Color Conventions
-$brand-primary:         #234597; // #4D6387; // #6AA7D0;
-$brand-secondary:       #90C4EC; // #428bca;
-$brand-success:         #75cc58;
-$brand-info:            #90C4EC; // #5bc0de;
+$brand-primary:         #3498db; // #4D6387; // #6AA7D0;
+$brand-secondary:       #2980b9; // #428bca;
+$brand-success:         #5cb85c;
+$brand-info:            #3498db; // #5bc0de;
 $brand-warning:         #f0ad4e;
 $brand-danger:          #c0392b;
 $brand-dark:            #171717;
 
 // Scaffolding /////////////////////////////////////////////////////////////////
 $body-bg:               #ffffff; //#ecf0f1;
-$header-bg-color:       #ffffff;
-$footer-bg-color:       $gray-lighter;
+$header-bg-color:       $brand-dark;
+$footer-bg-color:       $header-bg-color;
 $text-color:            #7f8c8d;
 $link-color:            $brand-primary;
 $link-hover-color:      darken($link-color, 15%);
@@ -29,20 +29,14 @@ $link-hover-color:      darken($link-color, 15%);
 
 // Typography /////////////////////////////////////////////////////////////////
 
-// Font Weights
-$light: 300;
-$regular: 400;
-$bold: 900;
-
 // Font Families
-$font-family-sans-serif:    "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif:    "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif:         Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:     Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:          $font-family-sans-serif;
 
 // Font Sizes
 $font-size-base:        16px;
-$font-size-nav:         13px;
 $font-size-large:       ceil(($font-size-base * 1.25));
 $font-size-small:       ceil(($font-size-base * 0.85));
 
@@ -59,7 +53,7 @@ $line-height-computed: floor(($font-size-base * $line-height-base));
 
 // Heading Styles
 $headings-font-family:    inherit; //"Domine", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$headings-font-weight:    $light;
+$headings-font-weight:    $regular;
 $headings-line-height:    1.1;
 $h1-color:                $brand-primary !important;
 $headings-color:          $brand-dark;
@@ -289,7 +283,7 @@ $dropdown-link-active-bg:        inherit;
 // //** Number of columns in the grid.
 // $grid-columns:              12;
 // //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         60px;
+// $grid-gutter-width:         30px;
 // // Navbar collapse
 // //** Point at which the navbar becomes uncollapsed.
 // $grid-float-breakpoint:     $screen-sm-min;
@@ -320,7 +314,7 @@ $grid-gutter-width:         60px;
 // Components /////////////////////////////////////////////////////////////////
 
 // // Basics of a navbar
-$navbar-height:                    150px;
+$navbar-height:                    55px;
 // $navbar-margin-bottom:             $line-height-computed;
 $navbar-border-radius:             0px;
 // $navbar-padding-horizontal:        floor(($grid-gutter-width / 2));
@@ -328,15 +322,15 @@ $navbar-border-radius:             0px;
 $navbar-collapse-max-height:       700px;
 
 // $navbar-default-color:             #777;
-$navbar-default-bg:                #ffffff; // darken($header-bg-color, 5%);
-$navbar-default-border:            transparent; // darken($navbar-default-bg, 10%);
+$navbar-default-bg:                darken($header-bg-color, 5%);
+$navbar-default-border:            darken($header-bg-color, 10%);
 
 // // Navbar links
-$navbar-default-link-color:                $gray-light; // lighten($header-bg-color, 55%);
-$navbar-default-link-hover-color:          darken($navbar-default-link-color, 25%);
+$navbar-default-link-color:                lighten($header-bg-color, 55%);
+$navbar-default-link-hover-color:          #ffffff;
 $navbar-default-link-open-color:           $navbar-default-link-hover-color;
 // $navbar-default-link-hover-bg:             transparent;
-$navbar-default-link-active-color:         $brand-primary;
+// $navbar-default-link-active-color:         #ffffff;
 $navbar-default-link-active-bg:            transparent;
 // $navbar-default-link-disabled-color:       #ccc;
 // $navbar-default-link-disabled-bg:          transparent;
@@ -348,7 +342,7 @@ $navbar-default-link-active-bg:            transparent;
 
 // // Navbar toggle
 $navbar-default-toggle-hover-bg:           transparent;
-$navbar-default-toggle-icon-bar-bg:        $brand-primary;
+$navbar-default-toggle-icon-bar-bg:        #ffffff;
 $navbar-default-toggle-border-color:       transparent;
 
 

@@ -28,82 +28,80 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-		<!-- Google Analytics -->
-		
+		<!-- Google Analytics -->		
 
 		<!--[if lte IE 8]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-		<![endif]-->				
-
-		<?php do_action('before'); ?> 
+		<![endif]-->			
 		
-		<div class="container main-container col-no-padding">
+		<?php do_action('before'); ?> 
+		<header>			
+			<section class="container top-header hidden-xs">
+				<div class="hidden-xs hidden-sm col-md-3">
+					<?php gravity_form(4, $display_title=true, $display_description=false, $display_inactive=false, $field_values=null, $ajax=false, 50); ?>
+				</div>
+				<div class="col-md-6 col-no-padding-xs">
+					<div class="col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0 col-no-padding-xs">
+						<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
+				        	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php bloginfo('name'); ?> – <?php bloginfo('description'); ?>" width="100%">
+				        </a>
+			        </div>			        
+				</div>
+				<div class="hidden-xs hidden-sm col-md-3">
+					<h2>Live!</h2>
+					<span>Who's Playing? <i class="fa fa-arrow-circle-right fa-right"></i></span>
+				</div>
+			</section><!--.section-top-header-->		
+			
+			<section class="top-navbar">				
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="container">						
+						<div class="navbar-header">	
+							<div class="col-xs-10 col-no-padding-xs visible-xs">
+								<a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home" width="100%">	
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php bloginfo('name'); ?> – <?php bloginfo('description'); ?>">							
+								</a>	
+							</div>											
+							<div class="col-xs-2 col-no-padding-xs">
+								<button type="button" class="navbar-toggle navbar-right" data-toggle="collapse" data-target=".navbar-primary-collapse">
+									<span class="sr-only"><?php _e('Toggle navigation', 'bootstrap-basic'); ?></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>									
+								</button>
+							</div>					
+						</div>
+						
+						<div class="collapse navbar-collapse navbar-primary-collapse">
+							<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-left', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?> 
+							<?php if (is_active_sidebar('navbar-right')) { 								
+								dynamic_sidebar('navbar-right'); 
+							} ?>      					
+						</div><!--.navbar-collapse-->
+					</div>
+				</nav>				
+			</section> <!-- section-navbar -->
+		</header>		
+			
+			
+		<div class="body-content">
 
-			<header>			
-				<section class="top-navbar">				
-					<nav class="navbar navbar-default" role="navigation">
-						<div class="container col-no-padding-xs">						
-							<div class="navbar-header col-sm-4 col-md-5">	
-								<div class="brand col-xs-10 col-md-12 col-no-padding">
-									<div class="clearfix">
-										<a class="navbar-brand col-no-padding" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home" width="100%">	
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="The Mattress Plus">							
-										</a>
-									</div>									
-									<div class="clearfix hidden-xs">
-										<p class="text-center tagline"><?php bloginfo('description'); ?></p>
-									</div>									
-								</div>											
-								<div class="toggle col-xs-2 nav-right col-no-padding-xs">
-									<button type="button" class="navbar-toggle navbar-right" data-toggle="collapse" data-target=".navbar-primary-collapse">
-										<span class="sr-only"><?php _e('Toggle navigation', 'bootstrap-basic'); ?></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>									
-									</button>
-								</div>					
-							</div><!-- .navbar-header -->
-							
-							<div class="col-sm-8 col-md-7 collapse navbar-collapse navbar-right navbar-primary-collapse">
-								<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-left', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?> 
-								<?php if (is_active_sidebar('navbar-right')) { 								
-									dynamic_sidebar('navbar-right'); 
-								} ?>     					
-							</div><!--.navbar-collapse-->
-						</div><!-- .container -->
-					</nav>				
-				</section> <!-- section-navbar -->
-		    <div class="contact-nav hidden-xs">
-			    <a class="btn btn-primary btn" href="tel:5555555555">
-						<i class="fa fa-phone fa-1x"></i>
-			    	(555) 555-5555
-			    </a> 
-			    <a class="btn btn-primary btn" href="/locations">
-						<i class="fa fa-map-marker fa-1x"></i>			    	
-			    	Locations
-			    </a> 
-		    </div>				
-			</header>		
-				
-				
-			<div class="body-content">
-
-				<!-- Mobile Landing Section -->
-				<section class="mobile-landing visible-xs col-xs-12">
-				    <div class="col-xs-6 col-no-padding-xs phone" style="padding-right:5px">
-					    <a class="btn btn-primary btn-lg btn-block" href="tel:5555555555">
-					        (555) 555-5555
-					    </a> 
-				    </div>
-				    <div class="col-xs-6 col-no-padding-xs phone" style="padding-left:5px">
-					    <a class="btn btn-primary btn-lg btn-block" href="tel:4444444444">
-					        (444) 444-4444
-					    </a> 
-				    </div>
-				    <div class="col-xs-12 col-no-padding-xs call-to-action">
-					    <a class="btn btn-success btn-lg btn-block col-xs-12" href="/locations" style="margin-top:0px">
-					        <i class="fa fa-map-marker fa-1x"></i>
-					        Locations
-					    </a>
-				    </div>
-				</section>			
+			<!-- Mobile Landing Section -->
+			<section class="mobile-landing visible-xs col-xs-12">
+			    <div class="col-xs-6 col-no-padding-xs phone" style="padding-right:5px">
+				    <a class="btn btn-primary btn-lg btn-block" href="/schedule-inspection">
+				        (972) 492-7920
+				    </a> 
+			    </div>
+			    <div class="col-xs-6 col-no-padding-xs phone" style="padding-left:5px">
+				    <a class="btn btn-primary btn-lg btn-block" href="/schedule-inspection">
+				        (214) 390-2050
+				    </a> 
+			    </div>
+			    <div class="col-xs-12 col-no-padding-xs call-to-action">
+				    <a class="btn btn-danger btn-lg btn-block col-xs-12" href="/schedule-inspection" style="margin-top:0px">
+				        <i class="fa fa-calendar fa-1x"></i>
+				        Schedule Inspection
+				    </a>
+			    </div>
+			</section>			

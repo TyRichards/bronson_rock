@@ -5,24 +5,6 @@
  * @package bootstrap-basic
  */
 
-/* Register Image Sizes */
-
-function custom_image_sizes() {
-  add_theme_support('post-thumbnails');
-	add_image_size('content', 768, 9999, false);
-	add_image_size('sidebar', 568, 9999, false);
-}
-add_action('after_setup_theme', 'custom_image_sizes');
-
-function add_custom_sizes( $imageSizes ) {
-  $my_sizes = array(
-		'content' => 'Content',
-		'sidebar' => 'Sidebar'
-	);
-	return array_merge( $imageSizes, $my_sizes );
-}
-add_filter( 'image_size_names_choose', 'add_custom_sizes' );
-
 
 /**
  * Required WordPress variable.

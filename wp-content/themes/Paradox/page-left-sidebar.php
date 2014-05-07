@@ -27,27 +27,24 @@ Template Name: Left Sidebar
 
                 } //endwhile;
                 ?> 
-                <a class="btn btn-success" href="#">
+                <a class="btn btn-danger" href="#">
                     <i class="fa fa-phone fa-1x"></i>
-                    Call (555) 555-5555
+                    Call (972) 492-7920
                 </a>
                     &nbsp;&nbsp;
-                <a class="btn btn-success" href="/locations">
-                    <i class="fa fa-map-marker fa-1x"></i>
-                    Locations
-                </a>
+                <a class="btn btn-danger" href="/contact-us">
+                    <i class="fa fa-envelope fa-1x"></i>
+                    Email Us
+                </a> 
             </div>           
 
         </section>
         <section class="sidebar-col sidebar sidebar-left col-sm-5 col-sm-pull-7">
-            <div class="col-sm-10 col-no-padding">
+            <div class="col-sm-10 col-no-padding-xs">
                 <?php 
                     if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
                     the_post_thumbnail('sidebar-thumb', array('class' => 'feature-image attachment-sidebar-thumb img-rounded' ));
                     } 
-                    else {
-                        ?><img src="<?php echo get_template_directory_uri(); ?>/assets/images/sidebar-default.jpg" class="feature-image attachment-sidebar-thumb wp-post-image img-rounded" alt="<?php wp_title('|', true, 'right'); ?>"><?php
-                    }
                 ?>                  
                 <?php get_sidebar('default'); ?>       
             </div>                       

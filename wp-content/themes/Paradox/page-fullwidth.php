@@ -27,15 +27,15 @@ Template Name: Full Width
 
                 } //endwhile;
                 ?> 
-                <a class="btn btn-success" href="#">
+                <a class="btn btn-danger" href="#">
                     <i class="fa fa-phone fa-1x"></i>
-                    Call (555) 555-5555
+                    Call (972) 492-7920
                 </a>
                     &nbsp;&nbsp;
-                <a class="btn btn-success" href="/locations">
-                    <i class="fa fa-map-marker fa-1x"></i>
-                    Locations
-                </a>
+                <a class="btn btn-danger" href="/contact-us">
+                    <i class="fa fa-envelope fa-1x"></i>
+                    Email Us
+                </a> 
             </div>           
         </section>               
     </div>
