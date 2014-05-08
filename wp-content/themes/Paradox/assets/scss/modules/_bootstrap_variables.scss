@@ -10,27 +10,28 @@ $gray-light:            lighten(#000, 60%);   // #999
 $gray-lighter:          lighten(#000, 93.5%); // #eee
 
 // Color Conventions
-$brand-primary:         #3498db; // #4D6387; // #6AA7D0;
-$brand-secondary:       #2980b9; // #428bca;
+$brand-primary:         #eda307; // #4D6387; // #6AA7D0;
+$brand-secondary:       #cd00dd; // #428bca;
 $brand-success:         #5cb85c;
 $brand-info:            #3498db; // #5bc0de;
 $brand-warning:         #f0ad4e;
 $brand-danger:          #c0392b;
-$brand-dark:            #171717;
+$brand-dark:            #000000;
+$brand-light:           #fdf5eb;
 
 // Scaffolding /////////////////////////////////////////////////////////////////
-$body-bg:               #ffffff; //#ecf0f1;
+$body-bg:               $brand-dark; //#ecf0f1;
 $header-bg-color:       $brand-dark;
 $footer-bg-color:       $header-bg-color;
-$text-color:            #7f8c8d;
-$link-color:            $brand-primary;
+$text-color:            $brand-light;
+$link-color:            $brand-secondary;
 $link-hover-color:      darken($link-color, 15%);
 
 
 // Typography /////////////////////////////////////////////////////////////////
 
 // Font Families
-$font-family-sans-serif:    "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif:    "Courier New", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif:         Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:     Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:          $font-family-sans-serif;
@@ -47,16 +48,30 @@ $font-size-h4:          ceil(($font-size-base * 1.9));
 $font-size-h5:          ceil(($font-size-base * 1.5));
 $font-size-h6:          ($font-size-base + 2);
 
+// Font weights
+$light: 300;
+$regular: normal;
+$bold: 700;
+
 // Line Height
 $line-height-base: 1.65;
 $line-height-computed: floor(($font-size-base * $line-height-base));
 
 // Heading Styles
-$headings-font-family:    inherit; //"Domine", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headings-font-family:    'league_gothicregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $headings-font-weight:    $regular;
 $headings-line-height:    1.1;
 $h1-color:                $brand-primary !important;
-$headings-color:          $brand-dark;
+$headings-color:          $brand-light;
+$jumbo-headings-font-family:    "nimbus-sans-extended-n9", "nimbus-sans-extended", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$jumbo-headings-font-weight:    900;
+
+// Menu Fonts
+$navbar-font-family: $headings-font-family;
+$navbar-font-weight: $regular;
+$navbar-font-size: 33px;
+$btn-font-family: $headings-font-family;
+$btn-font-weight: $regular;
 
 //-- Iconography
 //
@@ -170,7 +185,7 @@ $btn-secondary-border:             darken($btn-secondary-bg, 5%);
 // //** `<input>` border radius
 // $input-border-radius:            $border-radius-base;
 // //** Border color for inputs on focus
-// $input-border-focus:             #66afe9;
+$input-border-focus:             $brand-secondary;
 
 // //** Placeholder text color
 // $input-color-placeholder:        $gray-light;
@@ -314,7 +329,7 @@ $dropdown-link-active-bg:        inherit;
 // Components /////////////////////////////////////////////////////////////////
 
 // // Basics of a navbar
-$navbar-height:                    55px;
+$navbar-height:                    54px;
 // $navbar-margin-bottom:             $line-height-computed;
 $navbar-border-radius:             0px;
 // $navbar-padding-horizontal:        floor(($grid-gutter-width / 2));
@@ -322,15 +337,15 @@ $navbar-border-radius:             0px;
 $navbar-collapse-max-height:       700px;
 
 // $navbar-default-color:             #777;
-$navbar-default-bg:                darken($header-bg-color, 5%);
-$navbar-default-border:            darken($header-bg-color, 10%);
+$navbar-default-bg:                transparent;
+$navbar-default-border:            transparent;
 
 // // Navbar links
-$navbar-default-link-color:                lighten($header-bg-color, 55%);
-$navbar-default-link-hover-color:          #ffffff;
+$navbar-default-link-color:                $brand-dark;
+$navbar-default-link-hover-color:          $brand-dark; // lighten($brand-dark, 35%);
 $navbar-default-link-open-color:           $navbar-default-link-hover-color;
 // $navbar-default-link-hover-bg:             transparent;
-// $navbar-default-link-active-color:         #ffffff;
+$navbar-default-link-active-color:         $navbar-default-link-hover-color;
 $navbar-default-link-active-bg:            transparent;
 // $navbar-default-link-disabled-color:       #ccc;
 // $navbar-default-link-disabled-bg:          transparent;

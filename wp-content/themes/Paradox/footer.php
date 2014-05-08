@@ -133,8 +133,9 @@
 		
 		<!--wordpress footer-->
 		<?php wp_footer(); ?> 
+
 		<!-- Typekit -->
-		<script type="text/javascript" src="//use.typekit.net/ksc8vkp.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>		
+		<script type="text/javascript" src="//use.typekit.net/wfk4yco.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	</body>
 </html>

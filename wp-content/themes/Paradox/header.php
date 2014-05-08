@@ -37,8 +37,14 @@
 		<?php do_action('before'); ?> 
 		<header>			
 			<section class="container top-header hidden-xs">
-				<div class="hidden-xs hidden-sm col-md-3">
+				<div class="hidden-xs hidden-sm col-md-3 text-center">
 					<?php gravity_form(4, $display_title=true, $display_description=false, $display_inactive=false, $field_values=null, $ajax=false, 50); ?>
+					<div class="social-icons">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-instagram"></i></a>
+						<a href="#"><i class="fa fa-youtube"></i></a>
+					</div>
 				</div>
 				<div class="col-md-6 col-no-padding-xs">
 					<div class="col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0 col-no-padding-xs">
@@ -47,9 +53,11 @@
 				        </a>
 			        </div>			        
 				</div>
-				<div class="hidden-xs hidden-sm col-md-3">
-					<h2>Live!</h2>
-					<span>Who's Playing? <i class="fa fa-arrow-circle-right fa-right"></i></span>
+				<div class="hidden-xs hidden-sm col-md-3 text-center">
+					<h2 class="jumbo-heading"><a href="/live">Live!</a></h2>
+					<span>
+						<a class="uppercase" href="/live">Who's Playing? <i class="fa fa-arrow-circle-right fa-right"></i></a>
+					</span>
 				</div>
 			</section><!--.section-top-header-->		
 			
@@ -59,7 +67,7 @@
 						<div class="navbar-header">	
 							<div class="col-xs-10 col-no-padding-xs visible-xs">
 								<a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home" width="100%">	
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php bloginfo('name'); ?> – <?php bloginfo('description'); ?>">							
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php bloginfo('name'); ?> – <?php bloginfo('description'); ?>">				
 								</a>	
 							</div>											
 							<div class="col-xs-2 col-no-padding-xs">
@@ -73,10 +81,12 @@
 						</div>
 						
 						<div class="collapse navbar-collapse navbar-primary-collapse">
+							<i class="star-icon star-icon-left"></i>
 							<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-left', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?> 
 							<?php if (is_active_sidebar('navbar-right')) { 								
 								dynamic_sidebar('navbar-right'); 
 							} ?>      					
+							<i class="star-icon star-icon-right"></i>
 						</div><!--.navbar-collapse-->
 					</div>
 				</nav>				

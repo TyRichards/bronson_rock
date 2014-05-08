@@ -1,11 +1,5 @@
 /* ADD SHAMEFUL HACKS BELOW */
 
-
-/* Hack Active States for now */
-body > header .navbar .nav .current-menu-item > a {
-    color: #ffffff!important;
-}
-
 body > header .navbar .nav .current-menu-ancestor > a {
     color: #ffffff!important;
 }

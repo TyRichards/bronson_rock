@@ -13,9 +13,15 @@ h1 {
     color: $h1-color;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
 ul li {
     // counter-increment: foo;
-    display: table-row;
+    // display: table-row; // Font Awesome Lists
     list-style: none;
 }
 
@@ -40,6 +46,10 @@ li::before {
 
 iframe {
     @include border-radius($border-radius-img);
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
 
 .body-content img {
@@ -116,15 +126,35 @@ border-color: $btn-secondary-border;
 // Header Navigation Menus /////////////////////////////////////////////////////////////////
 
 .nav > .menu-item > a {
-    font-weight: 500;
+    font-family: $navbar-font-family;
+    font-weight: $navbar-font-weight;
+    text-transform: uppercase;
+    font-size: $navbar-font-size;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .navbar {
     margin-bottom: 0px;
 }
 
+.navbar-nav {
+    // Center navbar
+    margin: 0 auto!important;
+    display: table;
+    table-layout: fixed;
+    float: none!important;
+}
+
+.nav > .feature-item > a {
+    font-family: "nimbus-sans-extended-n9", "nimbus-sans-extended", sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+    letter-spacing: -2px;
+}
+
 body > header > .top-navbar {
-    border-bottom: 5px solid $gray-lighter;
+    // border-bottom: 5px solid $gray-lighter;
 }
 
 .navbar-toggle {
@@ -149,12 +179,24 @@ body > header > .top-navbar {
     border-bottom: 1px solid lighten($navbar-default-bg, 10%);
 }
 
-.navbar-nav {
-    margin: 0px -15px;
-}
-
 .navbar-collapse {
     max-height: $navbar-collapse-max-height;
+}
+
+.star-icon {
+    background: transparent url('/wp-content/themes/Paradox/assets/images/star.png') no-repeat top left;
+    height: 23px;
+    width: 25px;
+    position: absolute;
+    top: 14px;
+}
+
+.star-icon-left {
+    left: 15px;
+}
+
+.star-icon-right {
+    right: 15px;
 }
 
 .sub-menu .menu-item:hover {
@@ -219,11 +261,6 @@ color: #ffffff!important;
 
 .body-content {
     @include dynamic-headings-color($headings-color, $body-bg, $text-color); // If header color is same as bg, then darken text color
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 0px;
-    margin-bottom: 0px;
 }
 
 .site-main {
@@ -424,4 +461,70 @@ background: #000000;
 
 .flex-video.widescreen {
     padding-bottom: 56%;
+}
+
+// Header Email Capture ////////////////////////////////
+
+section.top-header {
+    .gform_heading h3 {
+        font-size: 24px;
+        text-align: center;
+    }
+    .ginput_container input {  
+        width: 75%;
+        height: 35px;
+        // padding: 8px 30px;
+        font-size: 16px;    
+        color: #555555;
+        background-color: transparent;
+        border: 2px solid $brand-secondary;
+        @include border-radius(0 0 0 0);
+        margin: 5px auto;
+        font-size: 15px;
+        // text-transform: uppercase; 
+        &:focus {
+            border: 2px solid $brand-primary;
+        }               
+    }
+    .gform_wrapper .gform_button {
+        color: $brand-secondary;
+        background-color: transparent;
+        border-color: transparent;
+        border: none;
+        position: absolute;
+        top: 31px;
+        right: 16%;
+        padding: 5px 14px;
+    }  
+    .validation_error {
+        display: none;
+    }
+    .gform_validation_error .gfield_error input {
+        border: 2px solid red;
+    }    
+    .gfield_description.validation_message {
+        // text-align: center;
+        // font-size: 13px;
+        // color: $brand-warning;
+        // position: absolute;
+        display: none;
+    }
+    .social-icons .fa {
+        font-size: 22px;
+        padding: 0px 7px;
+    }
+}
+
+// Header Live Call-to-Action //////////////////////
+
+section.top-header {
+    .jumbo-heading {
+        font-family: $jumbo-headings-font-family;
+        font-weight: $jumbo-headings-font-weight;
+        font-size: 52px;
+        color: $text-color;
+        text-transform: uppercase;
+        a { color: inherit; &:hover { color: darken($text-color, 10%) }
+        }
+    }   
 }

@@ -3,7 +3,8 @@
 // Header /////////////////////////////////////////////////////////////////
 
 body > header { 
-    @include dynamic-bg($header-bg-color); 
+    // @include dynamic-bg($header-bg-color); 
+    background: #070208 image-url('header-bg.jpg') center top repeat-x;
     // margin-bottom: -20px;
 }
 
@@ -15,6 +16,16 @@ body > header {
 }
 
 // Navbar Section /////////////////////////////////////////////////////////////////
+
+section.top-navbar {
+    background: image-url('menu-bg.png') center top repeat-x;
+    .navbar-default {
+        border: none;
+    }
+    .collapse {
+        position: relative;
+    }
+}
 
 // Masthead Section /////////////////////////////////////////////////////////////////
 
