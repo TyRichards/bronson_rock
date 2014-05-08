@@ -1,7 +1,10 @@
 // Dynamic Background Changes causes text color changes
-// @include dynamic-bg(#ffffff);
+// @include dynamic-footer-bg(#ffffff);
 
-@mixin dynamic-bg($bg-color) {
+
+// Footer Bg ///////////////////////////////////////
+
+@mixin dynamic-footer-bg($bg-color) {
   @if lightness($bg-color) < 75% {
     
     background-color: $bg-color;
@@ -25,6 +28,8 @@
 
 // Dynamic Headers Changes causes text color changes
 // @include dynamic-header-color($color, $bg-color);
+
+// Header Bg ///////////////////////////////////////
 
 @mixin dynamic-headings-color($color, $bg-color, $text-color) {
   @if $color == $bg-color {     

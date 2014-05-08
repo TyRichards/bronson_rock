@@ -5,52 +5,31 @@
 
 // Small devices (tablets, 768px and up)
 @media (min-width: $screen-sm-min) {
-
-    .masthead {
-        background-color: $gray-lighter;
-    }
-
-    .navbar-collapse .navbar-nav li {
-       border: none;
-    }
-
+    .masthead { background-color: $gray-lighter; }
+    .navbar-collapse .navbar-nav li { border: none; }
     .small-footer {
-
-        a {
-            display: inline;
-            text-align: left;        
-        }
-
+        a { display: inline; text-align: left;        }
         .footer-menu, .footer-credits {
             width: auto;
         }    
-
         .footer-credits a,
         .footer-menu .menu li a {
             padding-right: $space-sm;
         }
     }
-
-
 }
 
 // Medium devices (desktops, 992px and up)
 @media (min-width: $screen-md-min) {
 
-    header .navbar-brand img {
-        width: 100%;
-    }    
-
-    .logos .container .cred-logo {
-        padding-left: 30px;
-        padding-right: 30px;
-    }    
-
+    header .navbar-brand img { width: 100%; }    
+    .logos .container .cred-logo { padding-left: 30px; padding-right: 30px; }    
     .sidebar #widget_sp_image-3 img {
         width: 75%;
         @include border-radius(200px);
         border: 4px solid $hr-border;
     }    
+    footer .col-left { border-right: 1px solid $brand-dark; }
 
 }
 

@@ -18,11 +18,12 @@ $brand-warning:         #f0ad4e;
 $brand-danger:          #c0392b;
 $brand-dark:            #000000;
 $brand-light:           #fdf5eb;
+$brand-clear:           $brand-light;
 
 // Scaffolding /////////////////////////////////////////////////////////////////
 $body-bg:               $brand-dark; //#ecf0f1;
 $header-bg-color:       $brand-dark;
-$footer-bg-color:       $header-bg-color;
+$footer-bg-color:       $brand-primary;
 $text-color:            $brand-light;
 $link-color:            $brand-secondary;
 $link-hover-color:      darken($link-color, 15%);
@@ -61,7 +62,7 @@ $line-height-computed: floor(($font-size-base * $line-height-base));
 $headings-font-family:    'league_gothicregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $headings-font-weight:    $regular;
 $headings-line-height:    1.1;
-$h1-color:                $brand-primary !important;
+$h1-color:                inherit;
 $headings-color:          $brand-light;
 $jumbo-headings-font-family:    "nimbus-sans-extended-n9", "nimbus-sans-extended", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $jumbo-headings-font-weight:    900;
@@ -73,6 +74,11 @@ $navbar-font-size: 33px;
 $btn-font-family: $headings-font-family;
 $btn-font-weight: $regular;
 
+// Text Shadow
+$default-text-shadow-color: rgba($brand-dark, 1);
+$default-text-shadow-blur: 0px;
+$default-text-shadow-v-offset: 5px;
+
 //-- Iconography
 //
 //## Specify custom locations of the include Glyphicons icon font. Useful for those including Bootstrap via Bower.
@@ -83,7 +89,7 @@ $icon-font-svg-id:        "glyphicons_halflingsregular";
 
 // Components /////////////////////////////////////////////////////////////////
 
-$padding-base-vertical:     8px;
+$padding-base-vertical:     2px;
 $padding-base-horizontal:   30px;
 
 $padding-large-vertical:    ($padding-base-vertical * 1.5);
@@ -137,6 +143,10 @@ $caret-width-large:         5px;
 // // Buttons /////////////////////////////////////////////////////////////////
 
 // $btn-font-weight:                normal;
+
+$btn-clear-color:                   $brand-clear;
+$btn-clear-hover-color:             #000;
+$btn-clear-border:                  $brand-clear;
 
 // $btn-default-color:              #333;
 // $btn-default-bg:                 #fff;

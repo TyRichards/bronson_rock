@@ -62,7 +62,8 @@ section.top-navbar {
 // Footer /////////////////////////////////////////////////////////////////
 
 .footer {
-    @include dynamic-bg($footer-bg-color);
+    @include dynamic-footer-bg($footer-bg-color);
+    color: $brand-dark;
 }
 
 
@@ -70,17 +71,14 @@ section.top-navbar {
 // More-Foot Section /////////////////////////////////////////////////////////////////
 
 .more-foot {
-    padding-top: $space-lg;
-    padding-bottom: $space-lg;
+    padding-top: $space-sm;
+    padding-bottom: $space-sm;
 }
 
 // Small Footer Section /////////////////////////////////////////////////////////////////
 
 .small-footer {
-    border-top: 1px solid darken($footer-bg-color, 10%);
-    padding: $space-sm-vert;
-
-    ul, ol, p {
-        margin-bottom: 0;
-    }
+    padding-top: 22px;    
+    padding-bottom: 20px;    
+    ul, ol, p { margin-bottom: 0; }
 }
