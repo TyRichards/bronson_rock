@@ -52,7 +52,7 @@ Template Name: Home
                         <i class="arrow fa fa-angle-right fa-right"></i>
                     </a>                                                            
                 </ul>
-                <a class="btn btn-lg btn-secondary text-center btn-clear" href="/residential">                    
+                <a class="btn btn-lg btn-secondary text-center btn-clear" href="/live">                    
                     View Full Schedule
                     <i class="fa fa-arrow-circle-right fa-right"></i>
                 </a>            
