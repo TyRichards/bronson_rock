@@ -97,7 +97,7 @@
 		<div class="body-content">
 
 			<!-- Mobile Landing Section -->
-			<section class="mobile-landing visible-xs col-xs-12">
+			<!-- <section class="mobile-landing visible-xs col-xs-12">
 			    <div class="col-xs-6 col-no-padding-xs phone" style="padding-right:5px">
 				    <a class="btn btn-primary btn-lg btn-block" href="/schedule-inspection">
 				        (972) 492-7920
@@ -114,4 +114,4 @@
 				        Schedule Inspection
 				    </a>
 			    </div>
-			</section>			
+			</section>			 -->

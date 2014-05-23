@@ -30,7 +30,8 @@ $space-xl-horiz:            0 $space-xl;
 
 // Typography /////////////////////////////////////////////////////////////////
 
-$paragraph-margin: 35px;
+$paragraph-margin: 25px;
 $mobile-paragraph-margin: $space-sm;
 $paragraph-top-margin: $paragraph-margin 0 0 0;
+$paragraph-bottom-margin: 0 0 $paragraph-margin 0;
 $mobile-paragraph-top-margin: $mobile-paragraph-margin 0 0 0;
