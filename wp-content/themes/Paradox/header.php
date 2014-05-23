@@ -55,7 +55,7 @@
 				</div>
 				<div class="hidden-xs hidden-sm col-md-3 text-center">
 					<h2 class="jumbo-header"><a href="/live">Live!</a></h2>
-					<span>
+					<span class="hot-link">
 						<a class="uppercase" href="/live">Who's Playing?<i class="fa fa-arrow-circle-right fa-right"></i></a>
 					</span>
 				</div>

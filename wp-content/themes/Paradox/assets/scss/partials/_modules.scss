@@ -9,10 +9,6 @@ a:hover {
     @include transition(all 0.2s ease-out);
 }
 
-h1 {
-    color: $h1-color;
-}
-
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -20,22 +16,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-family: $jumbo-headings-font-family;
-    font-weight: $jumbo-headings-font-weight;    
-    color: $text-color;
-    text-transform: uppercase;
+    color: $h1-color;
     @include single-text-shadow($brand-dark, -7px, 5px, 0);
 }   
 
+h2 {
+    color: $brand-dark;
+    @include single-text-shadow(#e3e1d1, -5px, 4px, 0);
+}
+
+h1, h2 {
+    font-family: $jumbo-headings-font-family;
+    font-weight: $jumbo-headings-font-weight;    
+}
+
+h3 {
+    font-family: $font-family-serif;
+    font-weight: $bold;
+}
+
 .btn {
-    font-family: $headings-font-family;
+    font-family: $font-family-sans-serif;
     font-weight: $regular;
     text-transform: uppercase;
     font-size: 35px;
 }
 
 .condensed {
-    font-family: $headings-font-family;
+    font-family: $font-family-sans-serif;
     font-weight: $regular;
     font-size: 50px;
 }
@@ -86,7 +94,12 @@ iframe {
 .fa-left { margin-right: 15px; }
 
 .body-content img {
-border: 1px solid #dddddd;
+    border: 8px solid $brand-primary;
+    @include single-box-shadow(#bbbbbb, 5px, 5px, 7px);
+}
+
+.img-circle {
+    border-radius: 50%!important;
 }
 
 .primary-content img {
@@ -128,10 +141,22 @@ header .navbar-brand {
     padding-right: 0px;
 }    
 
+// Title Bar //////////////////////////////////////////////////////////////
+
+.body-content .page-title {
+    background: $brand-dark;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    h1 {
+        color: $brand-primary;
+    }
+}
+
 // Masthead /////////////////////////////////////////////////////////////////
 
 .masthead {
     position: relative;
+    color: $brand-light;
     .background {
         background-image: image-url('section-bg.jpg');
     }
@@ -355,6 +380,7 @@ footer {
         }       
         .social-icons .fa { font-size: 37px; margin: 0 6px; } 
     }
+    hr { border-top: 1px solid $brand-dark }
     .col-right { padding-top: 42px; }
 }
 
@@ -392,7 +418,8 @@ footer {
 // Headings /////////////////////////////////////////////////////////////////
 
 .body-content {
-    @include dynamic-headings-color($headings-color, $body-bg, $text-color); // If header color is same as bg, then darken text color
+    
+    background: transparent image-url('light-bg.jpg') top left repeat;
 }
 
 .site-main {
@@ -598,20 +625,23 @@ background: #000000;
 
 section.top-header {
     .gform_heading h3 {
+        font-family: $font-family-sans-serif;
+        font-weight: $regular;
         font-size: 24px;
         text-align: center;
     }
     .ginput_container input {  
         width: 75%;
         height: 35px;
-        // padding: 8px 30px;
-        font-size: 16px;    
+        padding-top: 5px;
+        padding-bottom: 0;
+        font-family: $font-family-serif; 
         color: #555555;
         background-color: transparent;
         border: 2px solid $brand-secondary;
         @include border-radius(0 0 0 0);
         margin: 5px auto;
-        font-size: 15px;
+        font-size: 13px;
         // text-transform: uppercase; 
         &:focus {
             border: 2px solid $brand-primary;
@@ -653,9 +683,14 @@ section.top-header {
     .jumbo-header {
         @extend .jumbo-header;
         font-size: 52px;
-        a { color: inherit; &:hover { color: darken($text-color, 10%) }
+        a { color: $brand-light; &:hover { color: darken($brand-light, 10%) }
         }
     }   
+    .hot-link {
+        a { font-size: 12px; letter-spacing: 1px;
+            .fa { font-size: 16px; margin-left: 10px; }
+        }
+    }
 }
 
 // Events ///////////////////////////////////////////

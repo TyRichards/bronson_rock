@@ -21,10 +21,10 @@ $brand-light:           #fdf5eb;
 $brand-clear:           $brand-light;
 
 // Scaffolding /////////////////////////////////////////////////////////////////
-$body-bg:               $brand-dark; //#ecf0f1;
+$body-bg:               #e3e1d1; //#ecf0f1;
 $header-bg-color:       $brand-dark;
 $footer-bg-color:       $brand-primary;
-$text-color:            $brand-light;
+$text-color:            $brand-dark;
 $link-color:            $brand-secondary;
 $link-hover-color:      darken($link-color, 15%);
 
@@ -32,17 +32,17 @@ $link-hover-color:      darken($link-color, 15%);
 // Typography /////////////////////////////////////////////////////////////////
 
 // Font Families
-$font-family-sans-serif:    "Courier New", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-serif:         Georgia, "Times New Roman", Times, serif;
+$font-family-sans-serif:    'league_gothicregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:         'Cutive', "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 $font-family-monospace:     Menlo, Monaco, Consolas, "Courier New", monospace;
-$font-family-base:          $font-family-sans-serif;
+$font-family-base:          $font-family-serif;
 
 // Font Sizes
-$font-size-base:        16px;
+$font-size-base:        13px;
 $font-size-large:       ceil(($font-size-base * 1.25));
 $font-size-small:       ceil(($font-size-base * 0.85));
 
-$font-size-h1:          floor(($font-size-base * 3.5));
+$font-size-h1:          floor(($font-size-base * 4.25));
 $font-size-h2:          floor(($font-size-base * 2.9));
 $font-size-h3:          ceil(($font-size-base * 2.2));
 $font-size-h4:          ceil(($font-size-base * 1.9));
@@ -59,8 +59,10 @@ $line-height-base: 1.65;
 $line-height-computed: floor(($font-size-base * $line-height-base));
 
 // Heading Styles
-$headings-font-family:    'league_gothicregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
-$headings-font-weight:    $regular;
+$headings-font-family:    $font-family-serif;
+$headings-font-weight:    $bold;
+$condensed-font-family:   'league_gothicregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$condensed-font-weight:   $regular;
 $headings-line-height:    1.1;
 $h1-color:                inherit;
 $headings-color:          $brand-light;
@@ -68,7 +70,7 @@ $jumbo-headings-font-family:    "nimbus-sans-extended-n9", "nimbus-sans-extended
 $jumbo-headings-font-weight:    900;
 
 // Menu Fonts
-$navbar-font-family: $headings-font-family;
+$navbar-font-family: $font-family-sans-serif;
 $navbar-font-weight: $regular;
 $navbar-font-size: 33px;
 $btn-font-family: $headings-font-family;
