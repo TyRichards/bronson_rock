@@ -10893,8 +10893,9 @@ section.top-header .hot-link a .fa {
   margin-top: 3px;
   font-size: 10px;
   color: #aa7d1d;
+  margin-bottom: 0;
 }
-/* line 730, ../scss/partials/_modules.scss */
+/* line 731, ../scss/partials/_modules.scss */
 .events .media .arrow {
   position: absolute;
   top: 12px;
@@ -10902,7 +10903,7 @@ section.top-header .hot-link a .fa {
   font-size: 43px;
   color: white;
 }
-/* line 737, ../scss/partials/_modules.scss */
+/* line 738, ../scss/partials/_modules.scss */
 .events .media .btn, .events .media .gform_button {
   margin-top: -10px;
 }
