@@ -8,7 +8,7 @@ This is a private repo for a Paradox client.
 How to setup locally
 -------
 1. In Terminal:
-```
+..```
 $ cd /path/to/your/projects
 $ git clone https://github.com/TyRichards/bronson_rock.git
 ```
@@ -16,7 +16,7 @@ $ git clone https://github.com/TyRichards/bronson_rock.git
 3. Find database in /wp-content/uploads/wp-migrate-db-pro/(latest-db)
 4. Import database into local phpmyadmin/mysql setup
 5. Setup wp-config.php file to read like this:
-```
+..```
 /** The name of the database for WordPress */
 define('DB_NAME', 'wp_bronsonrock');
 
@@ -35,11 +35,10 @@ define('WP_SITEURL','http://nick.bronsonrocktx.com/');
 ```
 6. Start MAMP server and open nick.bronsonrocktx.com in a browser - should work fine
 7. You should be able to login to /wp-admin with: 
-u: Nick Meagher
-p: u: Nick Meagher
-p: zDd84vWwGk
+..u: Nick Meagher
+..p: zDd84vWwGk
 8. Start new git branch
-```
+..```
 $ git status # to verify that you are on master branch
 $ git checkout -b eventPosts master # to create a new feature branch called "eventPosts" based on master
 $ git status # to verify that you are now working in "eventPosts" branch
@@ -47,24 +46,24 @@ $ git push --set-upstream origin testFeature # allows you to push that branch to
 ```
 9. Do your thang (to-do's below)
 10. Do the Git Dance periodically:
-```
+..```
 $ git status # to see what you've changed
 $ git add . # to add any new files
 $ git commit -am "Notes of what you did"
 $ git push # to push your eventPosts feature branch to Github 
 ```
 11. When feature is completed, backup database before you do one final push to github
-* Login to /wp-admin
-* Go to Tools > Migrate DB Pro > Click "Backup: Nick > Ty" (puts backup db in uploads folder)
-* Press blue "Migrate DB & Save" button (wait for it to finish)
-* `$ git add .`
-* `$ git commit -am "Backup Database for eventPosts"`
-* `$ git push` # to push eventPosts branch to Github
-* `$ git checkout master` # to move back to master branch
-* `$ git merge --no-ff eventPosts` to merge eventPosts branch changes over to Master
-* `$ git add .`
-* `$ git commit -am "merge eventPosts branch"`
-* `$ git push` to push new master branch up to Github
+..* Login to /wp-admin
+..* Go to Tools > Migrate DB Pro > Click "Backup: Nick > Ty" (puts backup db in uploads folder)
+..* Press blue "Migrate DB & Save" button (wait for it to finish)
+..* `$ git add .`
+..* `$ git commit -am "Backup Database for eventPosts"`
+..* `$ git push` # to push eventPosts branch to Github
+..* `$ git checkout master` # to move back to master branch
+..* `$ git merge --no-ff eventPosts` to merge eventPosts branch changes over to Master
+..* `$ git add .`
+..* `$ git commit -am "merge eventPosts branch"`
+..* `$ git push` to push new master branch up to Github
 
 12. Buy a beer for yourself!
 
