@@ -32,6 +32,67 @@ body > header .navbar .nav .current-menu-ancestor > a {
     height: auto; 
     margin-right: 10px;
 }
+
+/* Styling Pagi Navi with bootstrap styles - Plugin Used: WP-PageNavi */
+
+.wp-pagenavi {
+	border-radius: 4px;
+  display: inline-block;
+  margin: 20px 0;
+  padding-left: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.wp-pagenavi span,
+.wp-pagenavi a {
+	display: inline;
+}
+
+.wp-pagenavi > a,
+.wp-pagenavi > span {
+	background-color: #fff;
+  border: 1px solid #ddd;
+  color: #428bca;
+  float: left;
+  margin-left: -1px;
+  padding: 6px 12px;
+  position: relative;
+  text-decoration: none;
+  line-height: 1.42857;
+  font-size: 14px;
+}
+
+.wp-pagenavi > a:hover,
+.wp-pagenavi > span:hover {
+	background-color: #eee;
+  border-color: #ddd;
+  color: #2a6496;
+}
+
+.wp-pagenavi span.current {
+	background-color: #428bca;
+  color: #fff;
+}
+
+.wp-pagenavi span:first-child,
+.wp-pagenavi a:first-child {
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.wp-pagenavi span:last-child,
+.wp-pagenavi a:last-child {
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
  
 
  /* Hack to get iPad navbar to not be so crowded */
