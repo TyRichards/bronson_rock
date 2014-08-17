@@ -1,50 +1,66 @@
 <?php
-/*
-Template Name: Live Events Archive
-*/
+	/*
+		Template Name: Live Events Archive
+	*/
 ?>
 
 <?php get_header(); ?>
 
 <section class="primary-content">
-    <div class="container col-no-padding-xs"> 
+    <div class="container"> 
         <div class="row">
-            <section class="container main-col page-content col-sm-7 col-sm-push-5 container"> 
+            <section class="container main-col page-content col-md-6 col-md-offset-3"> 
 
                 <div id="main" class="site-main" role="main">
-                    Events Template!!
-                    <?php 
-                    while (have_posts()) {
-                      the_post();
+                	
+                	<h1 class="text-center"><span class="condensed">Who's</span> Playing?</h1>
+                
+		                <div class="events">
+		                	
+		                	<?php
+		                			                				                		
+		                		$args = array(
+		                			'post_type' => 'event',
+		                			'posts_per_page' => '4',
+		                			'paged' => get_query_var('paged')
+		                		);
+		                	
+		                		$events = new WP_Query( $args );
+		                		if( $events->have_posts() ):
+		                		    while( $events->have_posts() ): $events->the_post();
+		                	?>
+		                	
+		                		<?php
+		                			// Let's format the date!
+		                			$date = DateTime::createFromFormat('Ymd', get_field('event_date'));
+		                		?>   
+		                		
+		                		<a class="media" href="http://<?php the_field('url'); ?>" target="_blank">    
+		                        <span class="pull-left"><?php echo $date->format('D M n'); ?></span>
+		                        <div class="media-body">
+		                            <h2><?php the_field('event_title'); ?></h2>
+		                            <p class="details"><?php the_field('event_time'); ?> | View Details</p>
+		                        </div>
+		                        <i class="arrow fa fa-angle-right fa-right"></i>
+		                    </a>
+		                    
+		                	<?php endwhile; ?>
+		                			                	
+												<?php wp_pagenavi( array( 'query' => $events ) ); ?>
+											
+											<?php endif; ?>
+		                		
+	                		
+		                		
+		                	<?php wp_reset_postdata(); ?>                                                            
+		                    
+		            </div><!-- end .events -->
+                	
+                </div><!-- #main -->        
 
-                      get_template_part('content', 'page');
-
-                      echo "\n\n";
-                      
-                      // If comments are open or we have at least one comment, load up the comment template
-                      if (comments_open() || '0' != get_comments_number()) {
-                        comments_template();
-                      }
-
-                      echo "\n\n";
-
-                    } //endwhile;
-                    ?> 
-                </div>           
-
-            </section>
-            <section class="sidebar-col sidebar sidebar-left col-sm-5 col-sm-pull-7">
-                <div class="col-sm-10 col-no-padding-xs">
-                    <?php 
-                        if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-                        the_post_thumbnail('sidebar-thumb', array('class' => 'feature-image attachment-sidebar-thumb img-rounded' ));
-                        } 
-                    ?>                  
-                    <?php get_sidebar('default'); ?>       
-                </div>                       
-            </section>        
-        </div> <!-- .row -->
-    </div> <!-- .container -->
+								</section>
+        </div><!-- end .row -->
+    </div><!-- end .container -->
 </section>
 
-<?php get_footer(); ?> 
+<?php get_footer(); ?>

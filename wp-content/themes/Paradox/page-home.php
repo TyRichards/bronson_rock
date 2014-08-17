@@ -18,47 +18,49 @@ Template Name: Home
         <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0">
             <div class="col-sm-12 col-md-11 col-md-offset-1 col-no-padding">
                 <h1><span class="condensed">Who's</span> Playing?</h1>
+                
                 <div class="events">
-                    <a class="media" href="#">                    
-                        <span class="pull-left">Sat Jun 21</span>
+                	
+                	<?php
+                		
+                		$args = array(
+                			'post_type' => 'event',
+                			'posts_per_page' => '4'
+                		);
+                	
+                		$events = new WP_Query( $args );
+                		if( $events->have_posts() ):
+                		    while( $events->have_posts() ): $events->the_post();
+                	?>
+                	
+                		<?php
+                			// Let's format the date!
+                			$date = DateTime::createFromFormat('Ymd', get_field('event_date'));
+                		?>   
+                		
+                		<a class="media" href="http://<?php the_field('url'); ?>" target="_blank">    
+                        <span class="pull-left"><?php echo $date->format('D M n'); ?></span>
                         <div class="media-body">
-                            <h2>Metal Shop</h2>
-                            <p class="details">7:30 PM | View Details</p>
+                            <h2><?php the_field('event_title'); ?></h2>
+                            <p class="details"><?php the_field('event_time'); ?> | View Details</p>
                         </div>
                         <i class="arrow fa fa-angle-right fa-right"></i>
                     </a>
-                    <a class="media" href="#">                    
-                        <span class="pull-left">Sat Jun 21</span>
-                        <div class="media-body">
-                            <h2>Metal Shop</h2>
-                            <p class="details">7:30 PM | View Details</p>
-                        </div>
-                        <i class="arrow fa fa-angle-right fa-right"></i>
-                    </a>
-                    <a class="media" href="#">                    
-                        <span class="pull-left">Sat Jun 21</span>
-                        <div class="media-body">
-                            <h2>Metal Shop</h2>
-                            <p class="details">7:30 PM | View Details</p>
-                        </div>
-                        <i class="arrow fa fa-angle-right fa-right"></i>
-                    </a>
-                    <a class="media" href="#">                    
-                        <span class="pull-left">Sat Jun 21</span>
-                        <div class="media-body">
-                            <h2>Metal Shop</h2>
-                            <p class="details">7:30 PM | View Details</p>
-                        </div>
-                        <i class="arrow fa fa-angle-right fa-right"></i>
-                    </a>                                                            
-                </ul>
+                		
+                	<?php
+                		    endwhile;
+                		endif;
+                		wp_reset_postdata();
+                	?>
+                                                                               
                 <a class="btn btn-lg btn-secondary text-center btn-clear" href="/live">                    
                     View Full Schedule
                     <i class="fa fa-arrow-circle-right fa-right"></i>
-                </a>            
-            </div>
-        </div>        
-    </div>
+                </a>        
+                    
+            </div><!-- end .events -->
+        </div><!-- end .col-sm-12 -->  
+    </div><!-- end .col-sm-10 -->
 </section>
 
 <?php get_footer(); ?> 

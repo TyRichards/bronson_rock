@@ -198,8 +198,7 @@ function bootstrapBasicMoreLinkText()
  * @param string $pagination_align_class
  * @return string the content already echo
  */
-function bootstrapBasicPagination($pagination_align_class = 'pagination-center pagination-row') 
-{
+function bootstrapBasicPagination($pagination_align_class = 'pagination-center pagination-row') {
 	global $wp_query;
 		$big = 999999999;
 		$pagination_array = paginate_links(array(
