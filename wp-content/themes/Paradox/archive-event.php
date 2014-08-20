@@ -6,7 +6,8 @@
 
 <?php get_header(); ?>
 
-<section class="primary-content">
+<section class="masthead">
+    <div class="background">&nbsp;</div>
     <div class="container"> 
         <div class="row">
             <section class="container main-col page-content col-md-6 col-md-offset-3"> 
@@ -39,7 +40,7 @@
 		                        <span class="pull-left"><?php echo $date->format('D M n'); ?></span>
 		                        <div class="media-body">
 		                            <h2><?php the_field('event_title'); ?></h2>
-		                            <p class="details"><?php the_field('event_time'); ?> | View Details</p>
+		                            <p class="details"><?php the_field('event_time'); ?> | Band Website</p>
 		                        </div>
 		                        <i class="arrow fa fa-angle-right fa-right"></i>
 		                    </a>

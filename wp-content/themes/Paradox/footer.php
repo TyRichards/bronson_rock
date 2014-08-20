@@ -18,7 +18,7 @@
 						<?php if (is_active_sidebar('navbar-right')) { 								
 							dynamic_sidebar('navbar-right'); 
 						} ?> 
-						<hr>
+						<hr class="hidden-xs">
 						<div class="col col-left col-md-6 text-center">
 							<div class="col-md-6">
 								<h3 class="phone">817-431-5543</h3>

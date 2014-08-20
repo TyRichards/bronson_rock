@@ -36,44 +36,46 @@
 		
 		<?php do_action('before'); ?> 
 		<header>			
-			<section class="container top-header hidden-xs">
-				<div class="row">
-					<div class="hidden-xs hidden-sm col-md-3 text-center">
-						<?php gravity_form(4, $display_title=true, $display_description=false, $display_inactive=false, $field_values=null, $ajax=false, 50); ?>
-						<div class="social-icons">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-instagram"></i></a>
-							<a href="#"><i class="fa fa-youtube"></i></a>
+			<div class="container">
+				<section class="top-header hidden-xs">				
+					<div class="row">
+						<div class="hidden-xs hidden-sm col-md-3 text-center">
+							<?php gravity_form(4, $display_title=true, $display_description=false, $display_inactive=false, $field_values=null, $ajax=false, 50); ?>
+							<div class="social-icons">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-instagram"></i></a>
+								<a href="#"><i class="fa fa-youtube"></i></a>
+							</div>
 						</div>
-					</div>
-					<div class="col-md-6 col-no-padding-xs">
-						<div class="col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0 col-no-padding-xs">
-							<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
-					        	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php bloginfo('name'); ?> – <?php bloginfo('description'); ?>" width="100%">
-					        </a>
-				        </div>			        
-					</div>
-					<div class="hidden-xs hidden-sm col-md-3 text-center">
-						<h2 class="jumbo-header"><a href="/live">Live!</a></h2>
-						<span class="hot-link">
-							<a class="uppercase" href="/live">Who's Playing?<i class="fa fa-arrow-circle-right fa-right"></i></a>
-						</span>
-					</div>
-				</div> <!-- .row -->
-			</section><!--.section-top-header-->		
+						<div class="col-md-6">
+							<div class="col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0">
+								<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
+						        	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php bloginfo('name'); ?> – <?php bloginfo('description'); ?>" width="100%">
+						        </a>
+					        </div>			        
+						</div>
+						<div class="hidden-xs hidden-sm col-md-3 text-center">
+							<h2 class="jumbo-header"><a href="/live">Live!</a></h2>
+							<span class="hot-link">
+								<a class="uppercase" href="/live">Who's Playing?<i class="fa fa-arrow-circle-right fa-right"></i></a>
+							</span>
+						</div>
+					</div> <!-- .row -->				
+				</section><!--.section-top-header-->		
+			</div> <!-- .container -->
 			
 			<section class="top-navbar">				
 				<nav class="navbar navbar-default" role="navigation">
 					<div class="container">						
 						<div class="navbar-header">	
 							<div class="row">
-								<div class="col-xs-10 col-no-padding-xs visible-xs">
+								<div class="col-xs-10 visible-xs">
 									<a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home" width="100%">	
 										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php bloginfo('name'); ?> – <?php bloginfo('description'); ?>">				
 									</a>	
 								</div>											
-								<div class="col-xs-2 col-no-padding-xs">
+								<div class="col-xs-2">
 									<button type="button" class="navbar-toggle navbar-right" data-toggle="collapse" data-target=".navbar-primary-collapse">
 										<span class="sr-only"><?php _e('Toggle navigation', 'bootstrap-basic'); ?></span>
 										<span class="icon-bar"></span>
