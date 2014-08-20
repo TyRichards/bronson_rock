@@ -36,15 +36,26 @@ h3 {
     color: black;
 }
 
+.page-template-page-menu-php .body-content {
+    background: #e3e1d1 image-url('light-bg.jpg') top left repeat;
+    h2, h3, h4, h5, h6 { color: $brand-dark; line-height: inherit; }
+    color: $brand-dark;
+}
+
+.textwidget {
+margin-top: 0!important;
+}
+
 .body-content {
-    background: transparent image-url('light-bg.jpg') top left repeat;
-    h1 {}
+    background: transparent image-url('default-bg.jpg') top left no-repeat;
+    color: #ffffff;
+    h1 { line-height: 1; margin-bottom: 20px }
     h2 {}
     // h3 { font-size: 18px; }
     h4 {}
     h5 {}
     h6 {}
-    h2, h3, h4, h5, h6 { margin-bottom: 10px; }
+    h2, h3, h4, h5, h6 { color: #aa7d1d; margin-bottom: 10px; line-height: 1; @include single-text-shadow(none);}
     p { margin-bottom: 25px; }
 }
 
@@ -62,6 +73,8 @@ h3 {
 //         i.fa { color: $brand-dark }
 //     }
 // }
+
+
 
 
 
