@@ -21,7 +21,7 @@ $brand-light:           #fdf5eb;
 $brand-clear:           $brand-light;
 
 // Scaffolding /////////////////////////////////////////////////////////////////
-$body-bg:               #e3e1d1; //#ecf0f1;
+$body-bg:               $brand-dark; //#ecf0f1;
 $header-bg-color:       $brand-dark;
 $footer-bg-color:       $brand-primary;
 $text-color:            $brand-dark;

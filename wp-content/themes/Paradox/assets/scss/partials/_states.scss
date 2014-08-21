@@ -38,15 +38,52 @@
 // Extra small devices only (phones, less than 768px)
 @media (max-width: $screen-xs-max) {
 
-    .clipboard-icon {        
-        padding-left: 109px;
-        padding-top: 13px;        
+    
+
+    header {
+        .navbar-brand { padding-top: 21px; }
+        section.top-navbar { background-image: none; }
+        .star-icon { display: none; }
+
+        .navbar-collapse.in {
+            background-color: $brand-dark;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            .navbar-nav {
+                // Un-center navbar
+                margin: inherit;
+                display: block;
+                table-layout: none;
+                float: none!important; 
+                li {
+                    // border-bottom: 1px solid lighten($navbar-default-bg, 10%);
+                    a { 
+                        color: $brand-light!important; 
+                        text-align: center; 
+                        &:hover { color: $brand-primary; }                            
+                    }
+                }    
+                .current_page_item a { color: $brand-primary; }            
+            }                
+            
+        }           
     }
 
-    .footer-logo {
-        padding-bottom: $space-sm;
-        display: block;
-    }    
+    .main-col { padding-top: 0; padding-bottom: 0; }    
+
+    .footer {
+        #menu-main-menu-1 { display: none; }
+        .col-left { 
+            padding-bottom: 0px; 
+            padding-top: 0px; 
+            address {
+                margin: 0 auto;
+            }
+        }  
+        .col-right h3 i.fa { display: none; }                    
+    }
+
+    .condensed { font-size: 31px; }    
 
     .logos .container div {
         padding: 10px 75px;
@@ -57,10 +94,14 @@
         padding-bottom: ($space-lg - 50);
     }
 
+    .events .media .arrow {
+        right: 0;
+    }
+
     .body-content {
 
         h1 {
-            font-size: ($font-size-h1 * 0.7);
+            font-size: 32.5px; //font-size: ($font-size-h1 * 0.7);
         }
         h2 {
             font-size: ($font-size-h2 * 0.7);
@@ -81,6 +122,10 @@
         p, ul, ol {
             margin: $mobile-paragraph-top-margin;
         }                
+    }
+
+    .btn-live {
+        font-size: 25px;
     }
 
     .primary-content, .masthead, .logos, .footer {
@@ -117,6 +162,11 @@
     .no-float-sm {
         float: none!important;
     }      
+}
+
+// Xtra Small & Small Devices Only (phone and tablets up to 992px)
+@media (max-width: $screen-sm-max) {
+
 }
 
 // Medium devices only (desktops, 992px to 1200px)
