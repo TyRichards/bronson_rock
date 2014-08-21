@@ -25,7 +25,10 @@ Template Name: Home
                 		
                 		$args = array(
                 			'post_type' => 'event',
-                			'posts_per_page' => '4'
+                			'posts_per_page' => '4',
+                			'meta_key' => 'event_date', // Custom ordering
+                			'orderby' => 'meta_value_num',
+											'order' => 'ASC'
                 		);
                 	
                 		$events = new WP_Query( $args );
@@ -39,7 +42,7 @@ Template Name: Home
                 		?>   
                 		
                 		<a class="media" href="http://<?php the_field('url'); ?>" target="_blank">    
-                        <span class="pull-left"><?php echo $date->format('D M n'); ?></span>
+                        <span class="pull-left"><?php echo $date->format('D M j'); ?></span>
                         <div class="media-body">
                             <h2><?php the_field('event_title'); ?></h2>
                             <p class="details"><?php the_field('event_time'); ?> | View Details</p>
