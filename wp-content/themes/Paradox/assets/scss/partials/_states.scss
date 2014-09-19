@@ -30,7 +30,11 @@
         border: 4px solid $hr-border;
     }    
     footer .col-left { border-right: 1px solid $brand-dark; }
-
+    .daySpan {
+        .col-md-2 {
+            width: 14.2857143%
+        }
+    }
 }
 
 // Exclusive Media Queries /////////////////////////////////////////////////////////////////
@@ -120,7 +124,7 @@
         }      
 
         p, ul, ol {
-            margin: $mobile-paragraph-top-margin;
+            // margin: $mobile-paragraph-top-margin;
         }                
     }
 
