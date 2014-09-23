@@ -135,7 +135,7 @@ iframe {
 
 .body-content img {
     border: 8px solid $brand-primary;
-    @include single-box-shadow(#bbbbbb, 5px, 5px, 7px);
+    // @include single-box-shadow(#bbbbbb, 5px, 5px, 7px);
 }
 
 .img-circle {
