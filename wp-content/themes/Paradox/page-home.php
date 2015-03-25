@@ -9,7 +9,6 @@ Template Name: Home
 <!-- Subheader Section -->
 <section class="masthead">
     <div class="background">&nbsp;</div>
-<<<<<<< HEAD
     <div class="container col-no-padding-xs">        
         <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0"> 
             <div class="flex-video widescreen">                
