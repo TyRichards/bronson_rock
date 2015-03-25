@@ -42,7 +42,7 @@ Template Name: Home
                 		?>   
                 		
                 		<a class="media" href="http://<?php the_field('url'); ?>" target="_blank">    
-                        <!-- <span class="pull-left"><?php // echo $date->format('D M j'); ?></span>-->
+                        <span class="pull-left"><?php echo $date->format('D M j'); ?></span>
                         <div class="media-body">
                             <h2><?php the_field('event_title'); ?></h2>
                             <p class="details"><?php the_field('event_time'); ?> | View Details</p>
