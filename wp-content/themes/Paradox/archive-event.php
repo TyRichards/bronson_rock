@@ -18,16 +18,18 @@
                 
 		                <div class="events">
 		                	
-		                	<?php
+		                	<?php          	
 		                			                				                		
 		                		$args = array(
 		                			'post_type' => 'event',
-		                			'posts_per_page' => '5',
 		                			'meta_key' => 'event_date', // Custom ordering
-													'orderby' => 'meta_value_num',
+													'orderby' => 'meta_value',
 													'order' => 'ASC',
 		                			'posts_per_page' => '15',
-		                			'paged' => get_query_var('paged')
+		                			'paged' => get_query_var('paged'),
+		                			'meta_query' => array(
+			                			array( 'key' => 'event_date', 'compare' => '=>', 'value' => date('Y-m-d'), 'type' => 'DATE' )
+		                			)
 		                		);
 		                	
 		                		$events = new WP_Query( $args );
