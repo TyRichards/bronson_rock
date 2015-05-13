@@ -1,4 +1,5 @@
 .htaccess
+.DS_Store
 wp-config.php
 wp-content/themes/Paradox/config.codekit
 wp-content/themes/Paradox/.sass-cache/**
