@@ -32,10 +32,10 @@
 								<h3>Stay Connected<i class="fa fa-angle-double-right fa-right"></i></h3>
 							</div>
 							<div class="social-icons col-md-6">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-youtube"></i></a>								
+								<a href="https://www.facebook.com/BronsonRockRestaurantandBar"><i class="fa fa-facebook"></i></a>
+								<a href="https://twitter.com/bronsonrocktx"><i class="fa fa-twitter"></i></a>
+								<a href="https://instagram.com/bronsonrocktx/"><i class="fa fa-instagram"></i></a>
+								<!-- <a href="#"><i class="fa fa-youtube"></i></a> -->								
 							</div>
 						</div>
 
